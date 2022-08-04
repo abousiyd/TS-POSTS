@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import PostCard from "./Post";
 import Search from "./Search";
-import { USER_HOME } from "../commons/constants";
+import { USER_HOME, SCROLL_MARGIN } from "../commons/constants";
 import Feedback from "./Feedback";
 import BottomBar from "./BottomBar";
 import { Post } from "../services";
@@ -44,7 +44,7 @@ const Posts: React.FC = (): JSX.Element => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.innerHeight + document.documentElement.scrollTop < document.documentElement.offsetHeight) return;
+      if (window.innerHeight + document.documentElement.scrollTop + SCROLL_MARGIN < document.documentElement.offsetHeight) return;
       const data: TPosts = !!searchQuery ? postsCopy : posts;
       const nextPosts: TPosts = data.slice(
         0,

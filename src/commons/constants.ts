@@ -16,3 +16,5 @@ export const LOGIN = {
   userNotFound: "User not found, try to enter with a id between 1 and 10",
   invalidInput: "Please enter a valid number (userID)"
 };
+
+export const SCROLL_MARGIN = 200;
