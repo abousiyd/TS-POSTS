@@ -44,11 +44,7 @@ const Posts: React.FC = (): JSX.Element => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (
-        window.innerHeight + document.documentElement.scrollTop !==
-        document.documentElement.offsetHeight
-      )
-        return;
+      if (window.innerHeight + document.documentElement.scrollTop < document.documentElement.offsetHeight) return;
       const data: TPosts = !!searchQuery ? postsCopy : posts;
       const nextPosts: TPosts = data.slice(
         0,

@@ -3,7 +3,7 @@
 Technical test for Cleverpy.
 
 Preview:
-[deployed demo, made with love hope you like it!](https://alleged-mind.surge.sh/) 
+[deployed demo, made with love hope you like it!](http://furtive-art.surge.sh/) 
 
 ![Cleverpy preview](./doc/img/login.png)
 
